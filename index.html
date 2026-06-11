@@ -13,7 +13,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top navbar-custom">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">🚌 BusGo Sumatra</a>
 
@@ -23,254 +23,85 @@
 
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#jadwal">Jadwal</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pesan">Pesan Tiket</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#kontak">Kontak</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pesan">Pesan Tiket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#armada">Armada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section id="home" class="hero text-white text-center">
+    <section id="home" class="hero-section text-white text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Pesan Tiket Bus Online</h1>
             <p>Cepat, Aman, dan Murah</p>
-            <a href="#pesan" class="btn btn-warning btn-lg">
-                Pesan Sekarang
-            </a>
+            <a href="#pesan" class="btn btn-warning btn-lg">Pesan Sekarang</a>
         </div>
     </section>
 
-    <!-- Jadwal -->
-    <section id="jadwal" class="container py-5">
-        <h2 class="text-center mb-4">Jadwal Keberangkatan</h2>
-
-        <div class="row g-4">
-
+    <!-- Statistik -->
+    <section class="container py-5 statistik-section">
+        <div class="row text-center">
             <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5>Jambi → Palembang</h5>
-                        <p>08:00 WIB</p>
-                        <p>Rp150.000</p>
-
-                        <button class="btn btn-primary w-100 pilih"
-                            data-rute="Jambi → Palembang"
-                            data-jam="08:00 WIB"
-                            data-harga="150000">
-                            Pilih Jadwal
-                        </button>
-                    </div>
-                </div>
+                <h2>50+</h2>
+                <p>Rute Sumatra</p>
             </div>
-
             <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5>Jambi → Bengkulu</h5>
-                        <p>10:00 WIB</p>
-                        <p>Rp200.000</p>
-
-                        <button class="btn btn-primary w-100 pilih"
-                            data-rute="Jambi → Bengkulu"
-                            data-jam="10:00 WIB"
-                            data-harga="200000">
-                            Pilih Jadwal
-                        </button>
-                    </div>
-                </div>
+                <h2>1000+</h2>
+                <p>Pelanggan</p>
             </div>
-
             <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5>Jambi → Padang</h5>
-                        <p>12:00 WIB</p>
-                        <p>Rp180.000</p>
-
-                        <button class="btn btn-primary w-100 pilih"
-                            data-rute="Jambi → Padang"
-                            data-jam="12:00 WIB"
-                            data-harga="180000">
-                            Pilih Jadwal
-                        </button>
-                    </div>
-                </div>
+                <h2>24 Jam</h2>
+                <p>Layanan Customer Service</p>
             </div>
-
-            <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5>Jambi → Pekanbaru</h5>
-                        <p>14:00 WIB</p>
-                        <p>Rp250.000</p>
-
-                        <button class="btn btn-primary w-100 pilih"
-                            data-rute="Jambi → Pekanbaru"
-                            data-jam="14:00 WIB"
-                            data-harga="250000">
-                            Pilih Jadwal
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5>Jambi → Bandar Lampung</h5>
-                        <p>16:00 WIB</p>
-                        <p>Rp300.000</p>
-
-                        <button class="btn btn-primary w-100 pilih"
-                            data-rute="Jambi → Bandar Lampung"
-                            data-jam="16:00 WIB"
-                            data-harga="300000">
-                            Pilih Jadwal
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5>Jambi → Aceh</h5>
-                        <p>18:00 WIB</p>
-                        <p>Rp300.000</p>
-
-                        <button class="btn btn-primary w-100 pilih"
-                            data-rute="Jambi → Aceh"
-                            data-jam="18:00 WIB"
-                            data-harga="300000">
-                            Pilih Jadwal
-                        </button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Form -->
-    <section id="pesan" class="container pb-5">
+    <!-- Jadwal Keberangkatan -->
+    <div id="jadwal-placeholder"></div>
 
-        <div class="card shadow">
-            <div class="card-body">
+    <!-- Form Pemesanan -->
+    <div id="pesan-placeholder"></div>
 
-                <h3 class="mb-4">Pemesanan Tiket</h3>
+    <!-- Modal Pembayaran -->
+    <div id="modal-placeholder"></div>
 
-                <form id="formPesan">
+    <!-- Armada Bus -->
+    <div id="armada-placeholder"></div>
 
-                    <div class="mb-3">
-                        <label>Nama Penumpang</label>
-                        <input type="text" id="nama" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Rute</label>
-                        <input type="text" id="rute" class="form-control" readonly>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Jam Berangkat</label>
-                        <input type="text" id="jam" class="form-control" readonly>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Tanggal Berangkat</label>
-                        <input type="date" id="tanggal" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Jumlah Tiket</label>
-                        <input type="number" id="jumlah" value="1" min="1" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Total Harga</label>
-                        <input type="text" id="total" class="form-control" readonly>
-                    </div>
-
-                    <button type="button"
-                        class="btn btn-success w-100"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modalBayar">
-                        Lanjut Pembayaran
-                    </button>
-
-                </form>
-
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalBayar">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h5>Pembayaran</h5>
-                </div>
-
-                <div class="modal-body">
-
-                    <p><strong>Rute :</strong> <span id="mRute"></span></p>
-                    <p><strong>Jam :</strong> <span id="mJam"></span></p>
-                    <p><strong>Jumlah :</strong> <span id="mJumlah"></span></p>
-                    <p><strong>Total :</strong> <span id="mTotal"></span></p>
-
-                    <select class="form-select">
-                        <option>DANA</option>
-                        <option>OVO</option>
-                        <option>GoPay</option>
-                        <option>Transfer Bank</option>
-                    </select>
-
-                </div>
-
-                <div class="modal-footer">
-
-                    <button class="btn btn-success" id="bayar">
-                        Bayar Sekarang
-                    </button>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Kontak -->
-    <section id="kontak" class="py-5">
-        <div class="container text-center">
-            <h2>Kontak Kami</h2>
-            <p>Email : BusGoSumatra@busgo.co.id</p>
-            <p>Telepon : 0812-3456-7890</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-0">
-            © 2026 BusGo - Penjualan Tiket Bus Sumatra
-        </p>
-    </footer>
+    <!-- Kontak + Footer -->
+    <div id="kontak-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+
+    <script>
+        // Muat semua komponen HTML secara paralel, lalu jalankan script.js
+        async function loadComponents() {
+            const components = [
+                { id: 'jadwal-placeholder',  file: 'jadwal.html'  },
+                { id: 'pesan-placeholder',   file: 'pesan.html'   },
+                { id: 'modal-placeholder',   file: 'modal.html'   },
+                { id: 'armada-placeholder',  file: 'armada.html'  },
+                { id: 'kontak-placeholder',  file: 'kontak.html'  },
+            ];
+
+            await Promise.all(components.map(async ({ id, file }) => {
+                const res  = await fetch(file);
+                const html = await res.text();
+                document.getElementById(id).innerHTML = html;
+            }));
+
+            // Setelah semua komponen selesai dimuat, baru jalankan logika tiket
+            const s = document.createElement('script');
+            s.src = 'script.js';
+            document.body.appendChild(s);
+        }
+
+        loadComponents();
+    </script>
 
 </body>
 
