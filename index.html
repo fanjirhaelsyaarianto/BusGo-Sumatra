@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BusGo - Penjualan Tiket Bus</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top navbar-custom">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">🚌 BusGo Sumatra</a>
-
+            <a class="navbar-brand fw-bold" href="index.html">🚌 BusGo Sumatra</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pesan">Pesan Tiket</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#armada">Armada</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jadwal.html">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pesan.html">Pesan Tiket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="armada.html">Armada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <section id="home" class="hero-section text-white text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Pesan Tiket Bus Online</h1>
             <p>Cepat, Aman, dan Murah</p>
-            <a href="#pesan" class="btn btn-warning btn-lg">Pesan Sekarang</a>
+            <a href="pesan.html" class="btn btn-warning btn-lg">Pesan Sekarang</a>
         </div>
     </section>
 
-    <!-- Statistik -->
     <section class="container py-5 statistik-section">
         <div class="row text-center">
             <div class="col-md-4">
@@ -60,49 +52,10 @@
         </div>
     </section>
 
-    <!-- Jadwal Keberangkatan -->
-    <div id="jadwal-placeholder"></div>
-
-    <!-- Form Pemesanan -->
-    <div id="pesan-placeholder"></div>
-
-    <!-- Modal Pembayaran -->
-    <div id="modal-placeholder"></div>
-
-    <!-- Armada Bus -->
-    <div id="armada-placeholder"></div>
-
-    <!-- Kontak + Footer -->
-    <div id="kontak-placeholder"></div>
+    <footer class="footer-custom bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2026 BusGo - Penjualan Tiket Bus Sumatra</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        // Muat semua komponen HTML secara paralel, lalu jalankan script.js
-        async function loadComponents() {
-            const components = [
-                { id: 'jadwal-placeholder',  file: 'jadwal.html'  },
-                { id: 'pesan-placeholder',   file: 'pesan.html'   },
-                { id: 'modal-placeholder',   file: 'modal.html'   },
-                { id: 'armada-placeholder',  file: 'armada.html'  },
-                { id: 'kontak-placeholder',  file: 'kontak.html'  },
-            ];
-
-            await Promise.all(components.map(async ({ id, file }) => {
-                const res  = await fetch(file);
-                const html = await res.text();
-                document.getElementById(id).innerHTML = html;
-            }));
-
-            // Setelah semua komponen selesai dimuat, baru jalankan logika tiket
-            const s = document.createElement('script');
-            s.src = 'script.js';
-            document.body.appendChild(s);
-        }
-
-        loadComponents();
-    </script>
-
 </body>
-
 </html>

@@ -41,17 +41,15 @@ body {
 }
 
 .hero-section {
-    background:
+    background: 
         linear-gradient(
-            rgba(0,0,0,0.6),
-            rgba(0,0,0,0.6)
-        ),
-        url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80");
-
+            rgba(0, 0, 0, 0.6), 
+            rgba(0, 0, 0, 0.6)
+        ), 
+        url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
     background-position: center;
     min-height: 90vh;
-
     display: flex;
     align-items: center;
     justify-content: center;

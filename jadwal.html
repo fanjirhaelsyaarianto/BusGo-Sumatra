@@ -1,8 +1,31 @@
-<section id="jadwal" class="jadwal-section container py-5">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Keberangkatan - BusGo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🚌 BusGo Sumatra</a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="jadwal.html">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pesan.html">Pesan Tiket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="armada.html">Armada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="jadwal" class="jadwal-section container py-5">
         <h2 class="text-center mb-4">Jadwal Keberangkatan</h2>
-
         <div class="row g-4">
-
             <div class="col-md-4">
                 <div class="card jadwal-card h-100 shadow">
                     <div class="card-body">
@@ -19,7 +42,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card jadwal-card h-100 shadow">
                     <div class="card-body">
@@ -27,7 +49,6 @@
                         <p>10:00 WIB</p>
                          <p>Kursi Tersedia : 40</p>
                         <p>Rp200.000</p>
-
                         <button class="btn btn-primary w-100 pilih" 
                         data-rute="Jambi → Bengkulu" 
                         data-jam="10:00 WIB"
@@ -37,7 +58,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card jadwal-card h-100 shadow">
                     <div class="card-body">
@@ -45,7 +65,6 @@
                         <p>12:00 WIB</p>
                          <p>Kursi Tersedia : 35</p>
                         <p>Rp180.000</p>
-
                         <button class="btn btn-primary w-100 pilih" 
                         data-rute="Jambi → Padang" 
                         data-jam="12:00 WIB"
@@ -55,7 +74,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card jadwal-card h-100 shadow">
                     <div class="card-body">
@@ -63,7 +81,6 @@
                         <p>14:00 WIB</p>
                          <p>Kursi Tersedia : 45</p>
                         <p>Rp250.000</p>
-
                         <button class="btn btn-primary w-100 pilih" 
                         data-rute="Jambi → Pekanbaru" 
                         data-jam="14:00 WIB"
@@ -73,7 +90,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card jadwal-card h-100 shadow">
                     <div class="card-body">
@@ -81,7 +97,6 @@
                         <p>16:00 WIB</p>
                          <p>Kursi Tersedia : 50</p>
                         <p>Rp300.000</p>
-
                         <button class="btn btn-primary w-100 pilih" 
                         data-rute="Jambi → Bandar Lampung"
                         data-jam="16:00 WIB" 
@@ -91,7 +106,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card jadwal-card h-100 shadow">
                     <div class="card-body">
@@ -99,7 +113,6 @@
                         <p>18:00 WIB</p>
                          <p>Kursi Tersedia : 60</p>
                         <p>Rp400.000</p>
-
                         <button class="btn btn-primary w-100 pilih" 
                         data-rute="Jambi → Aceh" 
                         data-jam="18:00 WIB"
@@ -112,3 +125,12 @@
 
         </div>
     </section>
+
+    <footer class="footer-custom bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2026 BusGo - Penjualan Tiket Bus Sumatra</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
