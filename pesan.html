@@ -36,11 +36,25 @@
                     </div>
                     <div class="mb-3">
                         <label>Rute</label>
-                        <input type="text" id="rute" class="form-control" readonly>
+                        <select id="rute" class="form-select">
+                            <option value="">Pilih Rute</option>
+                            <option value="Jambi - Palembang">Jambi - Palembang</option>
+                            <option value="Jambi - Pekanbaru">Jambi - Pekanbaru</option>
+                            <option value="Jambi - Padang">Jambi - Padang</option>
+                            <option value="Jambi - Bengkulu">Jambi - Bengkulu</option>
+                            <option value="Jambi - Lampung">Jambi - Lampung</option>
+                            <option value="Jambi - Medan">Jambi - Medan</option>
+                            <option value="Jambi - Banda Aceh">Jambi - Banda Aceh</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Jam Berangkat</label>
-                        <input type="text" id="jam" class="form-control" readonly>
+                        <select id="jam" class="form-select">
+                            <option value="">Pilih Jam</option>
+                            <option value="08:00 WIB">08:00 WIB</option>
+                            <option value="13:00 WIB">13:00 WIB</option>
+                            <option value="20:00 WIB">20:00 WIB</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Tanggal Berangkat</label>
@@ -70,26 +84,8 @@
                     <h5>Pembayaran</h5>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <label>Rute</label>
-                        <select id="rute" class="form-select">
-                            <option value="">Pilih Rute</option>
-                            <option value="Jambi - Padang">Jambi - Padang</option>
-                            <option value="Jambi - Palembang">Jambi - Palembang</option>
-                            <option value="Jambi - Pekanbaru">Jambi - Pekanbaru</option>
-                            <option value="Jambi - Lampung">Jambi - Lampung</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Jam Berangkat</label>
-                        <select id="jam" class="form-select">
-                            <option value="">Pilih Jam</option>
-                            <option>08:00 WIB</option>
-                            <option>13:00 WIB</option>
-                            <option>20:00 WIB</option>
-                        </select>
-                    </div>
+                    <p><strong>Rute :</strong> <span id="mRute"></span></p>
+                    <p><strong>Jam :</strong> <span id="mJam"></span></p>
                     <p><strong>Jumlah :</strong> <span id="mJumlah"></span></p>
                     <p><strong>Total :</strong> <span id="mTotal"></span></p>
                     <select class="form-select">
