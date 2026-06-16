@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top navbar-custom">
         <div class="container">
@@ -52,7 +54,8 @@
                         <label>Total Harga</label>
                         <input type="text" id="total" class="form-control" readonly>
                     </div>
-                    <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalBayar">
+                    <button type="button" class="btn btn-success w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalBayar">
                         Lanjut Pembayaran
                     </button>
                 </form>
@@ -63,10 +66,30 @@
     <div class="modal fade" id="modalBayar" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header"><h5>Pembayaran</h5></div>
+                <div class="modal-header">
+                    <h5>Pembayaran</h5>
+                </div>
                 <div class="modal-body">
-                    <p><strong>Rute :</strong> <span id="mRute"></span></p>
-                    <p><strong>Jam :</strong> <span id="mJam"></span></p>
+                    <div class="mb-3">
+                        <label>Rute</label>
+                        <select id="rute" class="form-select">
+                            <option value="">Pilih Rute</option>
+                            <option value="Jambi - Padang">Jambi - Padang</option>
+                            <option value="Jambi - Palembang">Jambi - Palembang</option>
+                            <option value="Jambi - Pekanbaru">Jambi - Pekanbaru</option>
+                            <option value="Jambi - Lampung">Jambi - Lampung</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Jam Berangkat</label>
+                        <select id="jam" class="form-select">
+                            <option value="">Pilih Jam</option>
+                            <option>08:00 WIB</option>
+                            <option>13:00 WIB</option>
+                            <option>20:00 WIB</option>
+                        </select>
+                    </div>
                     <p><strong>Jumlah :</strong> <span id="mJumlah"></span></p>
                     <p><strong>Total :</strong> <span id="mTotal"></span></p>
                     <select class="form-select">
@@ -90,4 +113,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
