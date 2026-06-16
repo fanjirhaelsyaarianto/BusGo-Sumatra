@@ -141,3 +141,36 @@ footer {
     }
 
 }
+
+/* Armada */
+#armada {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.armada-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.armada-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+}
+
+.armada-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.badge {
+    font-size: 14px;
+    padding: 8px 15px;
+}

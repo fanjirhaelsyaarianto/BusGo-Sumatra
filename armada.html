@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Armada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="jadwal.html">Jadwal</a></li>
                     <li class="nav-item"><a class="nav-link" href="pesan.html">Pesan Tiket</a></li>
-                    <li class="nav-item"><a class="nav-link" href="armada.html">Armada</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="armada.html">Armada</a></li>
                     <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
                 </ul>
             </div>
@@ -27,70 +29,57 @@
     </nav>
 
     <section id="armada" class="container py-5">
-        <h2 class="text-center fw-bold mb-2">Armada Bus</h2>
-        <p class="text-center text-muted mb-5">
-            Pilih kelas perjalanan yang sesuai dengan kebutuhan Anda
-        </p>
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Armada Bus</h2>
+            <p class="text-muted">
+                Pilih kelas perjalanan yang sesuai dengan kebutuhan Anda
+            </p>
+        </div>
 
-
-        <div class="row g-4">
-
+        <div class="row justify-content-center g-4">
             <!-- Executive -->
-            <div class="col-md-4">
-                <div class="card armada-card shadow border-0 h-100">
+            <div class="col-lg-4 col-md-6">
+                <div class="card armada-card shadow-lg border-0 h-100">
                     <img src="https://ik.imagekit.io/tvlk/blog/2025/05/Bus-MTrans-Executive-Class-2.jpg?tr=q-70,c-at_max,w-1000,h-600"
-                        class="card-img-top" alt="Executive Bus">
-
+                        class="card-img-top armada-img" alt="Executive Bus">
                     <div class="card-body text-center">
                         <span class="badge bg-primary mb-2">Executive</span>
-
                         <h5 class="fw-bold">Executive Class</h5>
-
                         <p class="text-muted">
                             AC • WiFi • USB Charger • Reclining Seat
                         </p>
                     </div>
                 </div>
             </div>
-
             <!-- VIP -->
-            <div class="col-md-4">
-                <div class="card armada-card shadow border-0 h-100">
-                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800" class="card-img-top"
-                        alt="VIP Bus">
-
+            <div class="col-lg-4 col-md-6">
+                <div class="card armada-card shadow-lg border-0 h-100">
+                    <img src="https://luxuryvipbus.com/images/2021/10/18/vip-coach-47-pax.jpg"
+                        class="card-img-top armada-img" alt="VIP Bus">
                     <div class="card-body text-center">
                         <span class="badge bg-warning text-dark mb-2">VIP</span>
-
                         <h5 class="fw-bold">VIP Class</h5>
-
                         <p class="text-muted">
                             TV • Reclining Seat • Snack • Selimut
                         </p>
                     </div>
                 </div>
             </div>
-
             <!-- Sleeper -->
-            <div class="col-md-4">
-                <div class="card armada-card shadow border-0 h-100">
-                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800" class="card-img-top"
-                        alt="Sleeper Bus">
-
+            <div class="col-lg-4 col-md-6">
+                <div class="card armada-card shadow-lg border-0 h-100">
+                    <img src="https://www.manilatimes.net/manilatimes/uploads/images/2026/01/06/887340.jpeg"
+                        class="card-img-top armada-img" alt="Sleeper Bus">
                     <div class="card-body text-center">
                         <span class="badge bg-success mb-2">Sleeper</span>
-
                         <h5 class="fw-bold">Sleeper Bus</h5>
-
                         <p class="text-muted">
                             Tempat Tidur • AC • Selimut • Privasi Maksimal
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 </body>
-
 </html>
