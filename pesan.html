@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top navbar-custom">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">🚌 BusGo Sumatra</a>
+            <a class="navbar-brand fw-bold" href="index.html">
+                🚌 BusGo Sumatra
+            </a>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="jadwal.html">Jadwal</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="pesan.html">Pesan Tiket</a></li>
-                    <li class="nav-item"><a class="nav-link" href="armada.html">Armada</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jadwal.html">Jadwal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pesan.html">
+                            Pesan Tiket
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="armada.html">Armada</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <section id="pesan" class="pesan-section container py-5">
-        <div class="card pesan-card shadow mx-auto" style="max-width: 600px;">
+    <section class="container py-5">
+        <div class="card shadow mx-auto" style="max-width:600px">
             <div class="card-body">
-                <h3 class="mb-4">Pemesanan Tiket</h3>
-                <form id="formPesan">
+                <h3 class="mb-4">
+                    Pemesanan Tiket
+                </h3>
+                <form>
                     <div class="mb-3">
                         <label>Nama Penumpang</label>
                         <input type="text" id="nama" class="form-control" required>
@@ -37,57 +50,86 @@
                     <div class="mb-3">
                         <label>Rute</label>
                         <select id="rute" class="form-select">
-                            <option value="">Pilih Rute</option>
-                            <option value="Jambi - Palembang">Jambi - Palembang</option>
-                            <option value="Jambi - Pekanbaru">Jambi - Pekanbaru</option>
-                            <option value="Jambi - Padang">Jambi - Padang</option>
-                            <option value="Jambi - Bengkulu">Jambi - Bengkulu</option>
-                            <option value="Jambi - Lampung">Jambi - Lampung</option>
-                            <option value="Jambi - Medan">Jambi - Medan</option>
-                            <option value="Jambi - Banda Aceh">Jambi - Banda Aceh</option>
+                            <option value="">
+                                Pilih Rute
+                            </option>
+                            <option>
+                                Jambi - Palembang
+                            </option>
+                            <option>
+                                Jambi - Pekanbaru
+                            </option>
+                            <option>
+                                Jambi - Padang
+                            </option>
+                            <option>
+                                Jambi - Bengkulu
+                            </option>
+                            <option>
+                                Jambi - Lampung
+                            </option>
+                            <option>
+                                Jambi - Medan
+                            </option>
+                            <option>
+                                Jambi - Banda Aceh
+                            </option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label>Type Class</label>
+                        <label>Type Kelas</label>
                         <select id="kelas" class="form-select">
-                            <option value="">Pilih Kelas</option>
-                            <option value="Executive">Executive</option>
-                            <option value="VIP">VIP</option>
-                            <option value="Sleeper">Sleeper</option>
+                            <option value="">
+                                Pilih Kelas
+                            </option>
+                            <option value="Executive">
+                                Executive (Murah)
+                            </option>
+                            <option value="VIP">
+                                VIP (Menengah)
+                            </option>
+                            <option value="Sleeper">
+                                Sleeper (Mahal)
+                            </option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label>Jam Berangkat</label>
                         <select id="jam" class="form-select">
-                            <option value="">Pilih Jam</option>
-                            <option value="08:00 WIB">08:00 WIB</option>
-                            <option value="08:00 WIB">10:00 WIB</option>
-                            <option value="13:00 WIB">12:00 WIB</option>
-                            <option value="08:00 WIB">14:00 WIB</option>
-                            <option value="08:00 WIB">16:00 WIB</option>
-                            <option value="20:00 WIB">18:00 WIB</option>
+                            <option value="">
+                                Pilih Jam
+                            </option>
+                            <option value="08:00 WIB">
+                                08:00 WIB
+                            </option>
+                            <option value="10:00 WIB">
+                                10:00 WIB
+                            </option>
+                            <option value="12:00 WIB">
+                                12:00 WIB
+                            </option>
+                            <option value="14:00 WIB">
+                                14:00 WIB
+                            </option>
+                            <option value="16:00 WIB">
+                                16:00 WIB
+                            </option>
+                            <option value="18:00 WIB">
+                                18:00 WIB
+                            </option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label>Tanggal Berangkat</label>
-                        <input type="date" id="tanggal" class="form-control" required>
+                        <label>Tanggal</label>
+                        <input type="date" id="tanggal" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label>Jumlah Tiket</label>
                         <input type="number" id="jumlah" value="1" min="1" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label>Type Class</label>
-                        <select id="kelas" class="form-select">
-                            <option value="">Pilih Kelas</option>
-                            <option value="Executive">Executive</option>
-                            <option value="VIP">VIP</option>
-                            <option value="Sleeper">Sleeper</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
                         <label>Total Harga</label>
-                        <input type="text" id="total" class="form-control" readonly>
+                        <input id="total" class="form-control" readonly>
                     </div>
                     <button type="button" class="btn btn-success w-100" data-bs-toggle="modal"
                         data-bs-target="#modalBayar">
@@ -97,18 +139,33 @@
             </div>
         </div>
     </section>
-
-    <div class="modal fade" id="modalBayar" tabindex="-1">
+    <div class="modal fade" id="modalBayar">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5>Pembayaran</h5>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Rute :</strong> <span id="mRute"></span></p>
-                    <p><strong>Jam :</strong> <span id="mJam"></span></p>
-                    <p><strong>Jumlah :</strong> <span id="mJumlah"></span></p>
-                    <p><strong>Total :</strong> <span id="mTotal"></span></p>
+                    <p>
+                        <b>Rute :</b>
+                        <span id="mRute"></span>
+                    </p>
+                    <p>
+                        <b>Kelas :</b>
+                        <span id="mKelas"></span>
+                    </p>
+                    <p>
+                        <b>Jam :</b>
+                        <span id="mJam"></span>
+                    </p>
+                    <p>
+                        <b>Jumlah :</b>
+                        <span id="mJumlah"></span>
+                    </p>
+                    <p>
+                        <b>Total :</b>
+                        <span id="mTotal"></span>
+                    </p>
                     <select class="form-select">
                         <option>DANA</option>
                         <option>OVO</option>
@@ -117,18 +174,14 @@
                     </select>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-success" id="bayar">Bayar Sekarang</button>
+                    <button class="btn btn-success" id="bayar">
+                        Bayar Sekarang
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="footer-custom bg-dark text-white text-center py-3">
-        <p class="mb-0">© 2026 BusGo - Penjualan Tiket Bus Sumatra</p>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
