@@ -1,181 +1,159 @@
 let harga = 0;
-
-// Daftar harga rute
 const hargaRute = {
-    "Jambi - Palembang": 180000,
-    "Jambi - Pekanbaru": 150000,
-    "Jambi - Padang": 250000,
-    "Jambi - Bengkulu": 280000,
-    "Jambi - Lampung": 350000,
-    "Jambi - Medan": 550000,
-    "Jambi - Banda Aceh": 850000
+    "Jambi - Palembang": {
+        Executive: 180000,
+        VIP: 250000,
+        Sleeper: 400000
+    },
+    "Jambi - Pekanbaru": {
+        Executive: 200000,
+        VIP: 300000,
+        Sleeper: 500000
+    },
+    "Jambi - Padang": {
+        Executive: 250000,
+        VIP: 350000,
+        Sleeper: 550000
+    },
+    "Jambi - Bengkulu": {
+        Executive: 280000,
+        VIP: 400000,
+        Sleeper: 650000
+    },
+    "Jambi - Lampung": {
+        Executive: 350000,
+        VIP: 500000,
+        Sleeper: 750000
+    },
+    "Jambi - Medan": {
+        Executive: 550000,
+        VIP: 750000,
+        Sleeper: 1000000
+    },
+    "Jambi - Banda Aceh": {
+        Executive: 850000,
+        VIP: 1100000,
+        Sleeper: 1500000
+    }
 };
-
-// ─────────────────────────────────────────
-// Tombol Pilih Jadwal (jadwal.html)
-// ─────────────────────────────────────────
-document.addEventListener('click', function (e) {
-
-    const btn = e.target.closest('.pilih');
-
-    if (!btn) return;
-
-    localStorage.setItem('temp_rute', btn.dataset.rute);
-    localStorage.setItem('temp_jam', btn.dataset.jam);
-    localStorage.setItem('temp_harga', btn.dataset.harga);
-
-    window.location.href = 'pesan.html';
-});
-
-// ─────────────────────────────────────────
-// Saat halaman pesan.html dibuka
-// ─────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', function () {
-
-    if (!window.location.pathname.includes('pesan.html')) return;
-
-    const rute = document.getElementById('rute');
-    const jam = document.getElementById('jam');
-
-    if (!rute || !jam) return;
-
-    // Jika berasal dari halaman jadwal
-    const tempRute = localStorage.getItem('temp_rute');
-    const tempJam = localStorage.getItem('temp_jam');
-    const tempHarga = localStorage.getItem('temp_harga');
-
-    if (tempRute) {
-        rute.value = tempRute;
-    }
-
-    if (tempJam) {
-        jam.value = tempJam;
-    }
-
-    if (tempHarga) {
-        harga = Number(tempHarga);
-    } else {
-        harga = hargaRute[rute.value] || 0;
-    }
-
-    hitungTotal();
-});
-
-// ─────────────────────────────────────────
-// Saat rute berubah
-// ─────────────────────────────────────────
-document.addEventListener('change', function (e) {
-
-    if (e.target.id === 'rute') {
-
-        harga = hargaRute[e.target.value] || 0;
-
+// pilih jadwal
+document.addEventListener(
+    'click',
+    function (e) {
+        let btn = e.target.closest(".pilih");
+        if (!btn) return;
+        localStorage.setItem(
+            "temp_rute",
+            btn.dataset.rute
+        );
+        localStorage.setItem(
+            "temp_jam",
+            btn.dataset.jam
+        );
+        window.location.href = "pesan.html";
+    });
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+        let rute = document.getElementById("rute");
+        if (!rute) return;
+        rute.value =
+            localStorage.getItem("temp_rute") || "";
+        document.getElementById("jam").value =
+            localStorage.getItem("temp_jam") || "";
         hitungTotal();
-    }
-});
-
-// ─────────────────────────────────────────
-// Saat jumlah tiket berubah
-// ─────────────────────────────────────────
-document.addEventListener('input', function (e) {
-
-    if (e.target.id === 'jumlah') {
-        hitungTotal();
-    }
-});
-
-// ─────────────────────────────────────────
-// Hitung Total
-// ─────────────────────────────────────────
+    });
+document.addEventListener(
+    "change",
+    function (e) {
+        if (
+            e.target.id == "rute" ||
+            e.target.id == "kelas"
+        ) {
+            let rute =
+                document.getElementById("rute").value;
+            let kelas =
+                document.getElementById("kelas").value;
+            if (rute && kelas) {
+                harga =
+                    hargaRute[rute][kelas];
+            }
+            else {
+                harga = 0;
+            }
+            hitungTotal();
+        }
+    });
+document.addEventListener(
+    "input",
+    function (e) {
+        if (e.target.id == "jumlah") {
+            hitungTotal();
+        }
+    });
 function hitungTotal() {
-
-    const jumlahField = document.getElementById('jumlah');
-    const totalField = document.getElementById('total');
-
-    if (!jumlahField || !totalField) return;
-
-    const jumlah = Number(jumlahField.value) || 1;
-
-    const total = harga * jumlah;
-
-    totalField.value =
-        total > 0
-            ? 'Rp ' + total.toLocaleString('id-ID')
-            : '';
+    let jumlah =
+        Number(
+            document.getElementById("jumlah")?.value
+        ) || 1;
+    let total =
+        harga * jumlah;
+    let field =
+        document.getElementById("total");
+    if (field) {
+        field.value =
+            total ?
+                "Rp " + total.toLocaleString("id-ID")
+                : "";
+    }
 }
-
-// ─────────────────────────────────────────
-// Isi Modal Pembayaran
-// ─────────────────────────────────────────
-document.addEventListener('show.bs.modal', function (e) {
-
-    if (e.target.id !== 'modalBayar') return;
-
-    document.getElementById('mRute').innerText =
-        document.getElementById('rute').value;
-
-    document.getElementById('mJam').innerText =
-        document.getElementById('jam').value;
-
-    document.getElementById('mJumlah').innerText =
-        document.getElementById('jumlah').value + ' tiket';
-
-    document.getElementById('mTotal').innerText =
-        document.getElementById('total').value;
-});
-
-// ─────────────────────────────────────────
-// Tombol Bayar
-// ─────────────────────────────────────────
-document.addEventListener('click', function (e) {
-
-    if (e.target.id !== 'bayar') return;
-
-    const nama = document.getElementById('nama').value.trim();
-
-    if (!nama) {
-        alert('Nama penumpang belum diisi!');
-        return;
-    }
-
-    const rute = document.getElementById('rute').value;
-    const jam = document.getElementById('jam').value;
-    const tanggal = document.getElementById('tanggal').value;
-
-    if (!rute) {
-        alert('Silakan pilih rute!');
-        return;
-    }
-
-    if (!jam) {
-        alert('Silakan pilih jam keberangkatan!');
-        return;
-    }
-
-    if (!tanggal) {
-        alert('Tanggal berangkat belum diisi!');
-        return;
-    }
-
-    const jumlah =
-        Number(document.getElementById('jumlah').value) || 1;
-
-    const total = harga * jumlah;
-
-    const kode =
-        'BSG' + Math.floor(Math.random() * 100000);
-
-    localStorage.setItem('kode', kode);
-    localStorage.setItem('nama', nama);
-    localStorage.setItem('rute', rute);
-    localStorage.setItem('jam', jam);
-    localStorage.setItem('tanggal', tanggal);
-    localStorage.setItem('jumlah', jumlah);
-    localStorage.setItem('total', total);
-
-    localStorage.removeItem('temp_rute');
-    localStorage.removeItem('temp_jam');
-    localStorage.removeItem('temp_harga');
-
-    window.location.href = 'sukses.html';
-});
+// modal
+document.addEventListener(
+    "show.bs.modal",
+    function (e) {
+        document.getElementById("mRute").innerText =
+            document.getElementById("rute").value;
+        document.getElementById("mKelas").innerText =
+            document.getElementById("kelas").value;
+        document.getElementById("mJam").innerText =
+            document.getElementById("jam").value;
+        document.getElementById("mJumlah").innerText =
+            document.getElementById("jumlah").value + " tiket";
+        document.getElementById("mTotal").innerText =
+            document.getElementById("total").value;
+    });
+document.addEventListener(
+    "click",
+    function (e) {
+        if (e.target.id != "bayar") return;
+        let nama =
+            document.getElementById("nama").value;
+        let kode =
+            "BSG" + Math.floor(Math.random() * 99999);
+        localStorage.setItem("kode", kode);
+        localStorage.setItem("nama", nama);
+        localStorage.setItem(
+            "rute",
+            document.getElementById("rute").value
+        );
+        localStorage.setItem(
+            "kelas",
+            document.getElementById("kelas").value
+        );
+        localStorage.setItem(
+            "jam",
+            document.getElementById("jam").value
+        );
+        localStorage.setItem(
+            "jumlah",
+            document.getElementById("jumlah").value
+        );
+        localStorage.setItem(
+            "total",
+            harga *
+            Number(document.getElementById("jumlah").value)
+        );
+        window.location.href = "sukses.html";
+    });
+document.getElementById("kelas").innerText =
+localStorage.getItem("kelas");

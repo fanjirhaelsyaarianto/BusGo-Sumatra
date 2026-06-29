@@ -4,101 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <title>E-Tiket BusGo</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
-
-<div class="container py-5">
-
-    <div class="card shadow mx-auto" style="max-width:700px">
-
-        <div class="card-body">
-
-            <h2 class="text-success text-center">
-                ✓ Pembayaran Berhasil
-            </h2>
-
-            <hr>
-
-            <h4>E-Tiket</h4>
-
-            <table class="table">
-
-                <tr>
-                    <td>Kode Booking</td>
-                    <td id="kode"></td>
-                </tr>
-
-                <tr>
-                    <td>Nama</td>
-                    <td id="nama"></td>
-                </tr>
-
-                <tr>
-                    <td>Rute</td>
-                    <td id="rute"></td>
-                </tr>
-
-                <tr>
-                    <td>Jam</td>
-                    <td id="jam"></td>
-                </tr>
-
-                <tr>
-                    <td>Jumlah Tiket</td>
-                    <td id="jumlah"></td>
-                </tr>
-
-                <tr>
-                    <td>Total Bayar</td>
-                    <td id="total"></td>
-                </tr>
-
-                <tr>
-                    <td>Status</td>
-                    <td>
-                        <span class="badge bg-success">
-                            Lunas
-                        </span>
-                    </td>
-                </tr>
-
-            </table>
-
-            <a href="index.html" class="btn btn-primary">
-                Kembali ke Beranda
-            </a>
-
+    <div class="container py-5">
+        <div class="card shadow mx-auto" style="max-width:700px">
+            <div class="card-body">
+                <h2 class="text-success text-center">
+                    ✓ Pembayaran Berhasil
+                </h2>
+                <hr>
+                <h4>E-Tiket</h4>
+                <table class="table">
+                    <tr>
+                        <td>Kode Booking</td>
+                        <td id="kode"></td>
+                    </tr>
+                    <tr>
+                        <td>Nama</td>
+                        <td id="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>Rute</td>
+                        <td id="rute"></td>
+                    </tr>
+                    <tr>
+                        <td>Class Bus</td>
+                        <td id="kelas"></td>
+                    </tr>
+                    <tr>
+                        <td>Jam</td>
+                        <td id="jam"></td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Tiket</td>
+                        <td id="jumlah"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Bayar</td>
+                        <td id="total"></td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <span class="badge bg-success">
+                                Lunas
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <a href="index.html" class="btn btn-primary">
+                    Kembali ke Beranda
+                </a>
+            </div>
         </div>
-
     </div>
-
-</div>
-
-<script>
-
-document.getElementById("kode").innerText =
-localStorage.getItem("kode");
-
-document.getElementById("nama").innerText =
-localStorage.getItem("nama");
-
-document.getElementById("rute").innerText =
-localStorage.getItem("rute");
-
-document.getElementById("jam").innerText =
-localStorage.getItem("jam");
-
-document.getElementById("jumlah").innerText =
-localStorage.getItem("jumlah");
-
-document.getElementById("total").innerText =
-"Rp " + Number(localStorage.getItem("total"))
-.toLocaleString("id-ID");
-
-</script>
+    <script>
+        document.getElementById("kode").innerText =
+            localStorage.getItem("kode");
+        document.getElementById("nama").innerText =
+            localStorage.getItem("nama");
+        document.getElementById("rute").innerText =
+            localStorage.getItem("rute");
+        document.getElementById("jam").innerText =
+            localStorage.getItem("jam");
+        document.getElementById("jumlah").innerText =
+            localStorage.getItem("jumlah");
+        document.getElementById("total").innerText =
+            "Rp " + Number(localStorage.getItem("total"))
+                .toLocaleString("id-ID");
+    </script>
 
 </body>
 </html>
